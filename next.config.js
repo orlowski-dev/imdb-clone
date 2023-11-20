@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["m.media-amazon.com"],
+    minimumCacheTTL: 3600,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

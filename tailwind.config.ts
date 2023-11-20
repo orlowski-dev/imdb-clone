@@ -12,6 +12,12 @@ const config: Config = {
         inter: "var(--inter)",
       },
     },
+    aspectRatio: {
+      "2/3": "2 / 3",
+    },
+    gridTemplateColumns: {
+      results: "repeat(auto-fit, minmax(250px, 1fr))",
+    },
   },
   plugins: [],
   darkMode: "class",
