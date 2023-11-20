@@ -17,7 +17,7 @@ const config: Config = {
       "3/2": "3 / 2",
     },
     gridTemplateColumns: {
-      results: "repeat(auto-fit, minmax(250px, 1fr))",
+      results: "repeat(auto-fit, minmax(250px, 300px))",
       movieDetails: "40% auto",
     },
   },

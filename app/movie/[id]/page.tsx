@@ -31,16 +31,36 @@ export default async function Movie({ params }: { params: { id: string } }) {
         <div className="space-y-6">
           <h2 className="text-xl font-bold">{movieData.Title}</h2>
           <p>{movieData?.Plot}</p>
-          <p>Genre: {movieData?.Genre}</p>
-          <p>Runtime: {movieData?.Runtime}</p>
-          <p>Released: {movieData?.Released}</p>
-          <p>Metascore: {movieData?.Metascore}</p>
-          <p>Country: {movieData?.Country}</p>
-          <p>Language: {movieData?.Language}</p>
-          <p>Director: {movieData?.Director}</p>
-          <p>Writer: {movieData?.Writer}</p>
-          <p>Actors: {movieData?.Actors}</p>
-          <p>Awards: {movieData?.Awards}</p>
+          <p>
+            <b>Genre:</b> {movieData?.Genre}
+          </p>
+          <p>
+            <b>Runtime:</b> {movieData?.Runtime}
+          </p>
+          <p>
+            <b>Released:</b> {movieData?.Released}
+          </p>
+          <p>
+            <b>Metascore:</b> {movieData?.Metascore}
+          </p>
+          <p>
+            <b>Country:</b> {movieData?.Country}
+          </p>
+          <p>
+            <b>Language:</b> {movieData?.Language}
+          </p>
+          <p>
+            <b>Director:</b> {movieData?.Director}
+          </p>
+          <p>
+            <b>Writer:</b> {movieData?.Writer}
+          </p>
+          <p>
+            <b>Actors:</b> {movieData?.Actors}
+          </p>
+          <p>
+            <b>Awards:</b> {movieData?.Awards}
+          </p>
         </div>
       </section>
     </main>

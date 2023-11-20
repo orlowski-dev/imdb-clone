@@ -35,7 +35,7 @@ export async function getTradingMovies(): Promise<
 }
 
 export async function getTopRatedMovies(): Promise<
-  IApiResponseData | undefined
+  IApiResponseData | undefined | null
 > {
   const url =
     "https://moviesdatabase.p.rapidapi.com/titles/random?limit=20&list=top_rated_english_250";
@@ -50,5 +50,14 @@ export async function getMovieById(
   const url = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}`;
 
   const res = await fetch(url, { next: { revalidate: 3600 } });
+  return !res.ok ? undefined : res.json();
+}
+
+export async function getMovieByTitle(
+  title: string
+): Promise<IApiResponseData | undefined | null> {
+  const url = `https://moviesdatabase.p.rapidapi.com/titles/search/title/${title}?exact=false&titleType=movie&limit=20`;
+
+  const res = await fetch(url, options);
   return !res.ok ? undefined : res.json();
 }
