@@ -3,10 +3,23 @@ import DataLoading from "@/components/DataLoding";
 import Results from "@/components/Results";
 import { getUpcomingMovies } from "@/lib/getData";
 
+type ISearchParams =
+  | { g: "fetchUpcoming" }
+  | { g: "fetchTrending" }
+  | { g: "fetchTopRated" };
+
+export const generateStaticParams = () => {
+  return [
+    { g: "fetchUpcoming" },
+    { g: "fetchTrending" },
+    { g: "fetchTopRated" },
+  ];
+};
+
 export default async function App({
   searchParams,
 }: {
-  searchParams: { [key: string]: string };
+  searchParams: ISearchParams;
 }) {
   const genre = searchParams.g || "fetchUpcoming";
 
